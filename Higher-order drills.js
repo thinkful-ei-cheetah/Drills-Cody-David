@@ -19,6 +19,8 @@ function goodbye() {
 // repeat(goodbye,5);
 
 
+//2.
+
 function filter(arr,fn) {
     let newArray = []
     arr.map(word => {
@@ -49,3 +51,29 @@ const filteredNames = filter(myNames, function(name) {
 
 console.log(filteredNames) // => ['Rich', 'Ray']
 // <---- DO NOT EDIT BETWEEN THESE LINES
+
+
+//3.
+function hazardWarningCreator(typeOfWarning){
+    let warningCounter = 0;       
+    return function (location){
+        warningCounter++ ;
+        console.log(`DANGER! There is a ${typeOfWarning} hazard at ${location}!`);
+        if (warningCounter > 1){
+        console.log(`The ${typeOfWarning} hazard alert has triggered ${warningCounter} times today!`);
+        }
+        else {
+            console.log(`The ${typeOfWarning} hazard alert has triggered ${warningCounter} time today!`);
+        }
+        }
+    }
+
+const rocksWarning = hazardWarningCreator('Rocks on the Road');
+const tornadoWarning = hazardWarningCreator('Wind on the Road');
+const blizzardWarning = hazardWarningCreator('Snow on the Road');
+
+rocksWarning('Main St and Pacific Ave');
+tornadoWarning('21st and Atlantic Ave');
+blizzardWarning('Something st and Arctic Ave');
+
+//4.
