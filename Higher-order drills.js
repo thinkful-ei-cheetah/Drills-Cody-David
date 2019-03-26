@@ -15,4 +15,7 @@ function goodbye() {
     console.log("Goodbye World")
 }
 
-console.log(repeat(hello, 5));
+// repeat(hello, 5);
+// repeat(goodbye,5);
+
+
