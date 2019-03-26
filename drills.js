@@ -24,6 +24,7 @@ function min(numbers) {
     return currentMin;
 }
 
+//2. Compute the average
 function average(arr){
     let total = 0;
       arr.forEach(function (a){
@@ -32,3 +33,5 @@ function average(arr){
       return total/arr.length;
   }
   console.log(average([1,2]));
+
+
