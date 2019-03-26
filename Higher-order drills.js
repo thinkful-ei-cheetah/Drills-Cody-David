@@ -49,7 +49,7 @@ const filteredNames = filter(myNames, function(name) {
     return name[0] === 'R';
 });
 
-console.log(filteredNames) // => ['Rich', 'Ray']
+// console.log(filteredNames) // => ['Rich', 'Ray']
 // <---- DO NOT EDIT BETWEEN THESE LINES
 
 
@@ -72,8 +72,26 @@ const rocksWarning = hazardWarningCreator('Rocks on the Road');
 const tornadoWarning = hazardWarningCreator('Wind on the Road');
 const blizzardWarning = hazardWarningCreator('Snow on the Road');
 
-rocksWarning('Main St and Pacific Ave');
-tornadoWarning('21st and Atlantic Ave');
-blizzardWarning('Something st and Arctic Ave');
+// rocksWarning('Main St and Pacific Ave');
+// tornadoWarning('21st and Atlantic Ave');
+// blizzardWarning('Something st and Arctic Ave');
 
 //4.
+
+
+
+function forEachFilterMap(arr) {
+
+    // This uses filter to remove any array with either number being negative
+    let newArr = arr.filter(array => array[0] >= 0 && array[1] >= 0);
+
+    
+    // This uses map to return the total steps from each array
+    let mapArray = arr.map(array => Math.abs(array[0]) + Math.abs(array[1]));
+    
+    // This uses forEach to log out how many steps the turtle took in each case
+    arr.forEach(array => Math.abs(array[0]) + Math.abs(array[1]));
+
+}
+
+console.log(forEachFilterMap([[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]]));
