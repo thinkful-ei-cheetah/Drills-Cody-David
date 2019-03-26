@@ -23,3 +23,12 @@ function min(numbers) {
     }
     return currentMin;
 }
+
+function average(arr){
+    let total = 0;
+      arr.forEach(function (a){
+           total+= a;
+      });
+      return total/arr.length;
+  }
+  console.log(average([1,2]));
