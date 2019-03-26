@@ -95,3 +95,19 @@ function forEachFilterMap(arr) {
 }
 
 console.log(forEachFilterMap([[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]]));
+
+let stringOfwords ='noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest'
+function arrayToString(arr){
+   return arr.split(' ')
+    .reduce((item,word)=>{
+        if(word.length === 3){
+            item = ' ';
+        }else{
+            let cap = word[word.length-1].toUpperCase()
+            item = cap
+        }
+       console.log(item)
+    },'');
+}
+
+arrayToString(stringOfwords)
